@@ -42,6 +42,79 @@ h1 {
   margin: 0;
   font-size: 2.5em;
 }
+
+a {
+  color: #3498db;
+  text-decoration: none;
+}
+
+.contact {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  padding: 10px;
+  background-color: white;
+  padding: 30px;
+  margin: 20px 0;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+li {
+  margin-bottom: 10px;
+  font-size: 1em;
+  color: #333;
+  line-height: 1.6;
+  font-weight: bold;
+  width: 100%;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #f9f9f9;
+  padding: 10px;
+  margin: 10px;
+}
+
+.skills {
+  background-color: white;
+  padding: 30px;
+  margin: 20px 0;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
 h2 {
+  text-align: center;
   color: #2c3e50;
+}
+.ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.contact {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.contact h2 {
+  margin: 0;
+  padding: 10px;
+}
+
+.contact p,
+.contact a {
+  display: inline-block;
+  margin: 0 5px;
+}
+
+.contact p {
+  margin-top: 15px;
 }
