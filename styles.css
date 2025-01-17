@@ -61,20 +61,6 @@ a {
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-li {
-  margin-bottom: 10px;
-  font-size: 1em;
-  color: #333;
-  line-height: 1.6;
-  font-weight: bold;
-  width: 100%;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  background-color: #f9f9f9;
-  padding: 10px;
-  margin: 10px;
-}
-
 .skills {
   background-color: white;
   padding: 30px;
@@ -91,30 +77,146 @@ h2 {
   flex-wrap: wrap;
   justify-content: center;
 }
-
 ul {
   list-style-type: none;
   padding: 0;
 }
-
-.contact {
-  text-align: center;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.contact h2 {
-  margin: 0;
+li {
+  margin-bottom: 10px;
+  font-size: 1em;
+  color: #333;
+  line-height: 1.6;
+  font-weight: bold;
+  width: 100%;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #f9f9f9;
   padding: 10px;
+  margin: 10px;
+  position: relative;
+}
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  top: 100%;
+
+  left: 0;
+  z-index: 1000;
+  float: left;
+  min-width: 10rem;
+  padding: 0.5rem 0;
+  margin: 0.125rem 0 0;
+  font-size: 1rem;
+  color: #212529;
+  text-align: left;
+  list-style: none;
+  background-color: #fff;
+  background-clip: padding-box;
+  border: 1px solid rgba(0, 0, 0, 0.15);
+  border-radius: 0.25rem;
+  box-shadow: 0 0.25rem 0.5rem rgba(0, 0, 0, 0.1);
+}
+.dropdown:hover .dropdown-menu {
+  display: block;
+}
+.dropdown-menu li {
+  margin-bottom: 0;
+  border: none;
+  border-radius: 5px;
+  background-color: #fff;
+  box-shadow: none;
+  width: 75%;
+}
+.dropdown-menu li:hover {
+  background-color: #f9f9f9;
+  color: #333;
 }
 
-.contact p,
-.contact a {
-  display: inline-block;
-  margin: 0 5px;
+.contact-container {
+  text-align: center;
+  font-family: Arial, sans-serif;
+  background-color: white;
+  padding: 30px;
+  margin: 20px 0;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-.contact p {
+.contact-title {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.contact-links {
+  display: flex;
+  justify-content: center;
+  gap: 20px; /* Space between links */
+}
+
+.contact-link {
+  text-decoration: none;
+  color: #007bff; /* Link color */
+  font-size: 18px;
+  transition: color 0.3s;
+}
+
+.contact-link:hover {
+  color: #0056b3; /* Hover color */
+}
+
+/* FEDDBACK */
+
+/* Styles for the form */
+#my-form {
+  max-width: 500px;
+  margin: 0 auto;
+  padding: 20px;
+  background: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+#my-form label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: bold;
+  color: #333;
+}
+
+#my-form input[type="email"],
+#my-form input[type="text"],
+#my-form textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+#my-form button {
+  width: 100%;
+  padding: 10px;
+  background: #007bff;
+  border: none;
+  border-radius: 4px;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+#my-form button:hover {
+  background: #0056b3;
+}
+
+#my-form-status {
   margin-top: 15px;
+  font-size: 14px;
+  color: green;
+}
+
+/* Error message styling */
+#my-form-status.error {
+  color: red;
 }
