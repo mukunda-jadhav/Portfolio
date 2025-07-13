@@ -404,11 +404,11 @@
 
         /* Contact Section */
         .contact-content {
-            
+            margin-bottom: 3.5rem;
             grid-template-columns: 1fr 1fr;
             gap: 4rem;
             margin-top: 2rem;
-         margin-bottom: 3.5rem;
+         
         }
 
         .contact-info {
