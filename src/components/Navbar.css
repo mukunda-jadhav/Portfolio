@@ -1,0 +1,126 @@
+:root {
+  --primary-color: #6366f1; /* Tailwind's indigo-500 */
+  --secondary-color: #0b1120; /* Tailwind's slate-950 */
+  --light-text-color: #f8fafc; /* Tailwind's slate-50 */
+}
+
+/* Global Navbar Styling */
+.navbar {
+  background-color: var(--secondary-color);
+  padding: 1rem 2rem;
+  height: 80px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2), 0 0 20px rgba(0, 0, 0, 0.1);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  transition: all 0.3s ease-in-out;
+}
+
+.nav-logo {
+  color: var(--primary-color);
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.nav-logo:hover {
+  filter: brightness(1.2);
+}
+
+/* Desktop and Mobile Menu Styles */
+.nav-menu {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-link {
+  color: var(--light-text-color);
+  text-decoration: none;
+  font-size: 1rem;
+  transition: color 0.3s ease-in-out;
+  position: relative;
+  font-weight: 500;
+}
+
+/* Animated Underline Effect for Desktop */
+@media screen and (min-width: 1024px) {
+  .nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: var(--primary-color);
+    transition: width 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  }
+  
+  .nav-link:hover::after {
+    width: 100%;
+  }
+
+  .nav-link.active::after {
+    width: 100%;
+  }
+}
+
+/* Mobile Menu Specific Styles */
+@media screen and (max-width: 1023px) {
+  .nav-menu {
+    flex-direction: column;
+    width: 280px;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    right: 0;
+    background: var(--secondary-color);
+    padding: 2rem;
+    box-shadow: -10px 0 30px rgba(0, 0, 0, 0.4);
+    z-index: 1001;
+  }
+
+  .nav-link {
+    text-align: left;
+    padding: 1rem;
+    width: 100%;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  }
+
+  .nav-link:last-child {
+    border-bottom: none;
+  }
+
+  .nav-link:hover {
+    background-color: rgba(255, 255, 255, 0.05);
+  }
+
+  .nav-link.active {
+    color: var(--primary-color);
+    background-color: rgba(99, 102, 241, 0.1);
+    border-left: 4px solid var(--primary-color);
+  }
+
+  .menu-icon {
+    display: block;
+    font-size: 1.8rem;
+    cursor: pointer;
+    color: var(--light-text-color);
+    transition: transform 0.3s ease;
+  }
+
+  .menu-icon:hover {
+    transform: scale(1.1);
+  }
+
+  .nav-close-icon-container {
+    text-align: right;
+    padding: 1.5rem 1.5rem 1rem;
+  }
+}
