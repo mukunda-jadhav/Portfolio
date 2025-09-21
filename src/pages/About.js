@@ -21,7 +21,7 @@ const itemVariants = {
 const About = () => {
   return (
     <AnimatedPage>
-      <div className="rounded-xl bg-white p-6 shadow-md sm:p-8">
+      <div className="rounded-xl bg-background/80 p-6 shadow-xl backdrop-blur-md sm:p-8">
         <motion.div
           variants={containerVariants}
           initial="hidden"

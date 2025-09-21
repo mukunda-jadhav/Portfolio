@@ -30,7 +30,7 @@ const Contact = () => {
   return (
     <AnimatedPage>
       <motion.div
-        className="rounded-xl bg-white p-6 text-center shadow-md sm:p-8"
+        className="rounded-xl bg-background/80 p-6 text-center shadow-xl backdrop-blur-md sm:p-8"
         variants={containerVariants}
         initial="hidden"
         animate="visible"
@@ -42,7 +42,7 @@ const Contact = () => {
           Contact Me
         </motion.h1>
         <motion.p
-          className="mx-auto mb-12 max-w-2xl text-lg"
+          className="mx-auto mb-12 max-w-2xl text-lg text-slate-600"
           variants={itemVariants}
         >
           I'd love to connect with you! Whether you have a question or just want
@@ -59,7 +59,7 @@ const Contact = () => {
               <FaEnvelope className="h-5 w-5 text-slate-500" />
               <a
                 href="mailto:mukundjadhav1907@gmail.com"
-                className="text-lg text-slate-700 hover:text-primary hover:underline"
+                className="text-lg text-text-main hover:text-primary hover:underline"
               >
                 mukundjadhav1907@gmail.com
               </a>
@@ -68,7 +68,7 @@ const Contact = () => {
               <FaPhone className="h-5 w-5 text-slate-500" />
               <a
                 href="tel:+919420778504"
-                className="text-lg text-slate-700 hover:text-primary hover:underline"
+                className="text-lg text-text-main hover:text-primary hover:underline"
               >
                 +91 9420778504
               </a>
@@ -89,7 +89,7 @@ const Contact = () => {
                 <FaGithub />
               </a>
               <a
-                href="https://linkedin.com/in/mukund-jadhav"
+                href="https://www.linkedin.com/in/mukund-jadhav-884799214/"
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="LinkedIn"

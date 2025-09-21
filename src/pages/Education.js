@@ -22,18 +22,17 @@ const educations = [
   {
     degree: "Bachelor of Technology in Computer Science",
     institution: "Dr. J J Magdum College of Engineering Jaysinghpur",
-    period: " 2027",
+    period: "2027",
     description:
       "Currently pursuing a degree with a focus on web development, algorithms, and artificial intelligence.",
-   },
-  
+  },
 ];
 
 const Education = () => {
   return (
     <AnimatedPage>
       <motion.div
-        className="rounded-xl bg-white p-6 shadow-md sm:p-8"
+        className="rounded-xl bg-background/80 p-6 shadow-xl backdrop-blur-md sm:p-8"
         variants={containerVariants}
         initial="hidden"
         animate="visible"
@@ -45,17 +44,17 @@ const Education = () => {
           {educations.map((edu, index) => (
             <motion.div
               key={index}
-              className="flex flex-col rounded-xl border border-slate-200 bg-white p-6 shadow-sm"
+              className="flex flex-col rounded-xl border border-slate-200 bg-white/90 p-6 shadow-lg"
               variants={itemVariants}
               whileHover={{
                 y: -5,
-                boxShadow: "0px 10px 20px rgba(0,0,0,0.05)",
+                boxShadow: "0px 15px 25px rgba(0,0,0,0.1)",
                 transition: { type: "spring", stiffness: 300 },
               }}
             >
               <h3 className="text-xl font-bold text-primary">{edu.degree}</h3>
               <p className="text-base font-semibold text-slate-500">
-                {edu.institution} |      Year of Passout{edu.period}
+                {edu.institution} | Year of Passout: {edu.period}
               </p>
               <p className="mt-2 flex-grow text-slate-600">{edu.description}</p>
             </motion.div>

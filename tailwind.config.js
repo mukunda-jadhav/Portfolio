@@ -25,6 +25,9 @@ module.exports = {
           "sans-serif",
         ],
       },
+      backgroundImage: {
+        "hero-pattern": "url('./assets/images/bg.jpg')",
+      },
     },
   },
   plugins: [require("@tailwindcss/forms")],

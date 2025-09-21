@@ -39,7 +39,7 @@ const Experience = () => {
   return (
     <AnimatedPage>
       <motion.div
-        className="rounded-xl bg-white p-6 shadow-md sm:p-8"
+        className="rounded-xl bg-background/80 p-6 shadow-xl backdrop-blur-md sm:p-8"
         variants={containerVariants}
         initial="hidden"
         animate="visible"
@@ -51,14 +51,14 @@ const Experience = () => {
           {experiences.map((exp, index) => (
             <motion.div
               key={index}
-              className="rounded-xl border border-slate-200 bg-white p-6 shadow-sm"
+              className="rounded-xl border border-slate-200 bg-white/90 p-6 shadow-lg transition-shadow duration-300 hover:shadow-xl"
               variants={itemVariants}
             >
               <h3 className="text-2xl font-bold text-primary">{exp.role}</h3>
               <p className="text-md font-semibold text-slate-500">
                 {exp.company} | {exp.period}
               </p>
-              <p className="mt-2">{exp.description}</p>
+              <p className="mt-2 text-slate-600">{exp.description}</p>
             </motion.div>
           ))}
         </div>

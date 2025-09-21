@@ -18,7 +18,12 @@ const nameContainerVariants = {
   visible: {
     opacity: 1,
     x: 0,
-    transition: { staggerChildren: 0.06, delayChildren: 0.3, type: "tween", ease: "easeOut" },
+    transition: {
+      staggerChildren: 0.06,
+      delayChildren: 0.3,
+      type: "tween",
+      ease: "easeOut",
+    },
   },
 };
 
@@ -95,21 +100,19 @@ const Home = () => {
 
         {/* Call to Action Button */}
         <motion.div variants={itemVariants} className="mt-8">
-  <MotionLink
-    to="/projects"
-    className="rounded-xl bg-gradient-to-r from-purple-500 to-indigo-600 py-3 px-8 font-bold text-white transition-shadow duration-300"
-    whileHover={{
-      scale: 1.05,
-      y: -5,
-      boxShadow: "0px 15px 30px rgba(99, 102, 241, 0.6)",
-    }}
-    whileTap={{ scale: 0.98 }}
-  >
-    View My Work
-  </MotionLink>
-</motion.div>
-          
-
+          <MotionLink
+            to="/projects"
+            className="rounded-xl bg-gradient-to-r from-purple-600 to-indigo-600 py-3 px-8 font-bold text-white shadow-lg transition-all duration-300 hover:shadow-2xl hover:-translate-y-1"
+            whileHover={{
+              scale: 1.05,
+              y: -5,
+              boxShadow: "0px 15px 30px rgba(99, 102, 241, 0.6)",
+            }}
+            whileTap={{ scale: 0.98 }}
+          >
+            View My Work
+          </MotionLink>
+        </motion.div>
       </motion.div>
     </AnimatedPage>
   );

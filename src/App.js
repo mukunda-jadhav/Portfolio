@@ -31,7 +31,7 @@ function MainLayout() {
   const location = useLocation();
 
   return (
-    <div className="flex min-h-screen flex-col bg-background font-sans text-text-main">
+    <div className="flex min-h-screen flex-col font-sans">
       <Navbar />
       <main className="container mx-auto flex-grow p-4 sm:p-6 lg:p-8">
         <AnimatePresence mode="wait">

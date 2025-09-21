@@ -31,7 +31,7 @@ const projects = [
     title: "Chat-Web-Application",
     description:
       "💬 ChatConnect is a real-time web-based messaging platform that enables seamless communication between users. Built with modern frontend frameworks and powered by WebSocket technology, it supports instant message exchange, user authentication, and responsive design across devices. With features like emoji support, typing indicators, and message history, ChatConnect delivers a smooth and interactive chatting experience ideal for both casual and professional use.",
-    tech: ["HTML", "CSS", "JavaScript",  "Node.js"],
+    tech: ["HTML", "CSS", "JavaScript", "Node.js"],
     link: "https://chatweb-pjtt.onrender.com",
     repo: "https://github.com/mukunda-jadhav/chatweb",
   },
@@ -42,7 +42,7 @@ const Projects = () => {
   return (
     <AnimatedPage>
       <motion.div
-        className="rounded-xl bg-white p-6 shadow-md sm:p-8"
+        className="rounded-xl bg-background/80 p-6 shadow-xl backdrop-blur-md sm:p-8"
         variants={containerVariants}
         initial="hidden"
         animate="visible"
@@ -54,19 +54,21 @@ const Projects = () => {
           {projects.map((project, index) => (
             <motion.div
               key={index}
-              className="flex flex-col rounded-xl border border-slate-200 bg-white p-6 shadow-sm"
+              className="flex flex-col rounded-xl border border-slate-200 bg-white/90 p-6 shadow-lg"
               variants={itemVariants}
               whileHover={{
                 y: -8,
                 scale: 1.05,
-                boxShadow: "0px 10px 20px rgba(0,0,0,0.1)",
+                boxShadow: "0px 15px 25px rgba(0,0,0,0.1)",
                 transition: { type: "spring", stiffness: 300 },
               }}
             >
               <h3 className="text-2xl font-bold text-primary">
                 {project.title}
               </h3>
-              <p className="mt-2 flex-grow">{project.description}</p>
+              <p className="mt-2 flex-grow text-slate-600">
+                {project.description}
+              </p>
               <p className="mt-4">
                 <strong>Technologies:</strong> {project.tech.join(", ")}
               </p>

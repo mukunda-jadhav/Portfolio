@@ -20,13 +20,13 @@ const itemVariants = {
 
 const certifications = [
   {
-    name: "Training at wayspire EdTech pvt Ltd in",
+    name: "Training at Wayspire EdTech Pvt Ltd",
     issuer: "Wayspire",
     date: "2025",
     link: "https://drive.google.com/file/d/1HV60Xu40olPbTQmBYfBKIbJrQRkc1jx7/view?usp=sharing",
   },
   {
-    name: "Internship at wayspire EdTech pvt Ltd in",
+    name: "Internship at Wayspire EdTech Pvt Ltd",
     issuer: "Wayspire",
     date: "2025",
     link: "https://drive.google.com/file/d/12uSF7FgH2SjTaG0kLEeS0hhbBzZUJDvR/view?usp=sharing",
@@ -37,7 +37,7 @@ const Certifications = () => {
   return (
     <AnimatedPage>
       <motion.div
-        className="rounded-xl bg-white p-6 shadow-md sm:p-8"
+        className="rounded-xl bg-background/80 p-6 shadow-xl backdrop-blur-md sm:p-8"
         variants={containerVariants}
         initial="hidden"
         animate="visible"
@@ -49,8 +49,13 @@ const Certifications = () => {
           {certifications.map((cert, index) => (
             <motion.div
               key={index}
-              className="rounded-xl border border-slate-200 bg-white p-6 shadow-sm"
+              className="rounded-xl border border-slate-200 bg-white/90 p-6 shadow-lg"
               variants={itemVariants}
+              whileHover={{
+                y: -5,
+                boxShadow: "0px 15px 25px rgba(0,0,0,0.1)",
+                transition: { type: "spring", stiffness: 300 },
+              }}
             >
               <h3 className="text-2xl font-bold text-primary">{cert.name}</h3>
               <p className="text-md font-semibold text-slate-500">

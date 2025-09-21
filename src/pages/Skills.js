@@ -50,7 +50,7 @@ const itemVariants = {
 const Skills = () => {
   return (
     <AnimatedPage>
-      <div className="rounded-xl bg-white p-6 shadow-md sm:p-8">
+      <div className="rounded-xl bg-background/80 p-6 shadow-xl backdrop-blur-md sm:p-8">
         <h1 className="mb-8 inline-block border-b-4 border-primary bg-gradient-to-r from-primary to-purple-500 bg-clip-text pb-2 text-3xl font-bold text-transparent sm:text-4xl">
           My Skills
         </h1>
@@ -63,17 +63,17 @@ const Skills = () => {
           {skills.map((skill, index) => (
             <motion.div
               key={index}
-              className="flex flex-col items-center justify-center rounded-xl border border-slate-200 bg-white p-6 shadow-sm"
+              className="flex flex-col items-center justify-center rounded-xl border border-slate-200 bg-white/90 p-6 shadow-lg"
               variants={itemVariants}
               whileHover={{
                 y: -8,
                 scale: 1.05,
-                boxShadow: "0px 10px 20px rgba(0,0,0,0.1)",
+                boxShadow: "0px 15px 25px rgba(0,0,0,0.1)",
                 transition: { type: "spring", stiffness: 300 },
               }}
             >
               <div className="mb-4 text-5xl text-primary">{skill.icon}</div>
-              <p className="font-semibold">{skill.name}</p>
+              <p className="font-semibold text-text-main">{skill.name}</p>
             </motion.div>
           ))}
         </motion.div>
